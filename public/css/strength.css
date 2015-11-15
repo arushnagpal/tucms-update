@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+
+.strong{
+	background: -webkit-linear-gradient(left,rgba(255,255,0,0.3),rgba(0,255,0,0.3)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, rgba(255,255,0,0.3), rgba(0,255,0,0.3)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, rgba(255,255,0,0.3), rgba(0,255,0,0.3)); /* For Fx 3.6 to 15 */
+    background: linear-gradient(to right ,rgba(255,255,0,0.3), rgba(0,255,0,0.3)); /* Standard syntax (must be last) */
+}
+
+.medium{
+	background: -webkit-linear-gradient(left,rgba(255,0,0,0.3) , rgba(255,255,0,0.3)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left,rgba(255,0,0,0.3) , rgba(255,255,0,0.3)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left,rgba(255,0,0,0.3) , rgba(255,255,0,0.3)); /* For Fx 3.6 to 15 */
+    background: linear-gradient(to right,rgba(255,0,0,0.3) ,rgba(255,255,0,0.3)); /* Standard syntax (must be last) */
+	
+	
+}
+
+.weak{
+	background: -webkit-linear-gradient(left,rgba(255,0,0,0.3), rgba(255,0,0,0.3) ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left,rgba(255,0,0,0.3), rgba(255,0,0,0.3)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left,rgba(255,0,0,0.3), rgba(255,0,0,0.3) ); /* For Fx 3.6 to 15 */
+    background: linear-gradient(to right,rgba(255,0,0,0.3), rgba(255,0,0,0.3)); /* Standard syntax (must be last) */
+	
+	
+}
