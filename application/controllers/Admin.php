@@ -7,7 +7,7 @@ class Admin extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('Admin_model');
-        header("X-XSS-Protection: 1 mode=block ");
+        header("X-XSS-Protection: 1 mode=block; ");
         header('X-Content-Type-Options: nosniff');
         header('X-Frame-Options: SAMEORIGIN');
         header("Content-Security-Policy: script-src 'self' http://fonts.googleapis.com 'unsafe-inline' 'unsafe-eval';");
@@ -163,6 +163,50 @@ class Admin extends CI_Controller {
         $this->load->view('templates/footer');
         unset($_SESSION['stmt']);
     }
+    public function add_notification($page = 'notification') {
+        if (!file_exists(APPPATH . '/views/admin/' . $page . '.php')) {
+// Whoops, we don't have a page for that!
+            show_404();
+        }
+
+        $data['title'] = ucfirst($page);
+        if(isset($_POST['heading'])) {
+            $notif = $_POST['heading'];
+        
+        
+        if ($notif!="") {
+            $this->Admin_model->addNotf($notif);
+        }
+        }
+        $this->load->view('templates/user_header');
+        $this->load->view('admin/' . $page);
+        $this->load->view('templates/footer');
+
+        //unset($_SESSION['notf']);
+
+ /*if (!file_exists(APPPATH . '/views/admin/' . $page . '.php')) {
+// Whoops, we don't have a page for that!
+            show_404();
+        }
+        $data['title'] = ucfirst($page);
+        if (isset($_POST['name'])) {
+            $name = $this->string_validate($_POST['name']);
+            $data['name'] = TRUE;
+            $data['row'] = $this->Admin_model->searchStudentName($name);
+        }
+        $room = $this->input->post('room');
+        if ($room != "") {
+            $room = $this->string_validate($_POST['room']);
+            $data['room'] = TRUE;
+            $data['details'] = $this->Admin_model->searchStudent($room);
+        }
+        $this->load->view('templates/user_header', $data);
+        $this->load->view('admin/' . $page, $data);
+        $this->load->view('templates/footer');
+
+*/
+        
+    }
 
     public function newpoll($page = 'poll') {
         if (!file_exists(APPPATH . '/views/admin/' . $page . '.php')) {
@@ -225,6 +269,15 @@ class Admin extends CI_Controller {
         $_SESSION['stmt'] = TRUE;
         redirect(base_url() . 'admin/add_category');
     }
+    /*public function addNotification($page = 'notification') {
+        $data = $this->input->post();
+        $this->Admin_model->addNotf($data);
+        $_SESSION['notf'] = TRUE;
+        $this->load->view('templates/user_header', $data);
+        $this->load->view('admin/' . $page, $data);
+        $this->load->view('templates/footer');
+    }*/
+
 
     public function del_category($page = 'delete') {
         if (!file_exists(APPPATH . '/views/admin/' . $page . '.php')) {

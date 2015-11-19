@@ -6,7 +6,7 @@ class Complaint extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-        header("X-XSS-Protection: 1 mode=block ");
+        header("X-XSS-Protection: 1 ; mode=block ");
         header('X-Content-Type-Options: nosniff');
         header('X-Frame-Options: SAMEORIGIN');
         header("Content-Security-Policy: script-src 'self' http://fonts.googleapis.com 'unsafe-inline' 'unsafe-eval';");
@@ -74,6 +74,8 @@ class Complaint extends CI_Controller {
         $this->checkSession();
         $this->load->helper('smiley');
         $data['title'] = "Home";
+        $this->load->model('Student_model');
+        $data['notifications']= $this->Student_model->allnotifs();
         $this->load->view('templates/header', $data);
         $this->load->view('complaint/' . $page);
         $this->load->view('templates/footer');
