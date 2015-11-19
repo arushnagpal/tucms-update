@@ -19,7 +19,7 @@
 <section id="main" class="container 75%" style="padding-top: 0">
     <div class="box">
 
-        <form method="post" action="<?php echo base_url(); ?>index.php/student/check" name="complaint" id="complaint">
+        <form method="post" action="<?php echo base_url(); ?>student/check" name="complaint" id="complaint">
             <div id="type"><h3>Electricity</h3>
                 <input type="hidden" name="type" value="Electricity"/>
             </div>
@@ -118,7 +118,7 @@
                     document.getElementById("pollDisplay").innerHTML = xmlhttp.responseText;
                 }
             }
-            xmlhttp.open("GET", "<?php echo base_url(); ?>index.php/student/pollx?vote=" + radiovalue + "&z=" + id, true);
+            xmlhttp.open("GET", "<?php echo base_url(); ?>student/pollx?vote=" + radiovalue + "&z=" + id, true);
             xmlhttp.send();
             return false;
         }

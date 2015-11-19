@@ -37,7 +37,7 @@ function send() {
         document.getElementById("signin").disabled = true;
         $.ajax({
             type: 'post',
-            url: 'http://localhost/ci/index.php/complaint/check_user',
+            url: 'http://localhost/ci/complaint/check_user',
             data: {
                 email: $("#username").val(),
                 captcha: $("#captcha").val(),
@@ -46,10 +46,10 @@ function send() {
             success: function(data) {
                 if (data != 0) {
                     //window.alert("login successful");
-                    window.location.assign('http://localhost/ci/index.php/' + data);
+                    window.location.assign('http://localhost/ci/' + data);
                 }
                 else {
-                    window.location.assign('http://localhost/ci/index.php/complaint/sign_in');
+                    window.location.assign('http://localhost/ci/complaint/sign_in');
                 }
             }
         });

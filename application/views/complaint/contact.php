@@ -8,7 +8,7 @@ if (!isset($_COOKIE['count'])) {
 <script>
     function spam_alert() {
         alert("To prevent spamming, we allow atmost 3 feedbacks in 8 hours from 1 machine");
-        window.location.assign("http://localhost/ci/index.php/complaint");
+        window.location.assign("http://localhost/ci/complaint");
     }
 </script>
 
@@ -46,7 +46,7 @@ if (isset($_SESSION['stmt'])) {
             ?></p>
     </header>
     <div class="box">
-        <form method="post" action="<?php echo base_url(); ?>index.php/complaint/insertContact">
+        <form method="post" action="<?php echo base_url(); ?>complaint/insertContact">
             <div class="row uniform half collapse-at-2">
                 <div class="6u">
                     <input type="text" name="name" id="name" value="" placeholder="Name" required title="Enter your name"/>

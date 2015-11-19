@@ -9,7 +9,7 @@
     </header>
     <div class="box">
         <h5>Select the category to remove and click on delete.</h5>
-        <form method="get" action="<?php echo base_url(); ?>index.php/admin/deleteCategory">
+        <form method="get" action="<?php echo base_url(); ?>admin/deleteCategory">
             <table>
                 <?php
                 $i = 1;

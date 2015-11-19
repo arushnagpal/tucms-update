@@ -9,7 +9,7 @@ require_once(APPPATH . "libraries/functions.php");
 <script src="<?php echo base_url(); ?>public/js/complaint_ct.js" type="text/javascript" defer></script>
 
 <section id="main" class="container " >
-    <form action="<?php echo base_url(); ?>index.php/admin/filter" method="get" id="form">
+    <form action="<?php echo base_url(); ?>admin/filter" method="get" id="form">
         <section class="box" style="padding-top: 15px; padding-bottom: 0px;">
             <h1> Filters </h1>
             <div class="row">
@@ -77,7 +77,7 @@ require_once(APPPATH . "libraries/functions.php");
                     <div class="4u">
                         <ul class="actions" >
                             <li class="4u"><a onclick="document.getElementById('form').submit()" class="button special" >Search</a></li>
-                            <li class="3u" style="margin-right: 20px;"><a href="<?php base_url() . 'index.php/admin/resetFilters' ?>" class="button special" >Reset</a></li>
+                            <li class="3u" style="margin-right: 20px;"><a href="<?php base_url() . 'admin/resetFilters' ?>" class="button special" >Reset</a></li>
                             <li class="3u"><a class="button special" onclick="printDiv('print')" >Print</a></li>
                         </ul>
                     </div>
@@ -115,7 +115,7 @@ require_once(APPPATH . "libraries/functions.php");
             <br>
             <center>
 
-                <form action="<?php echo base_url(); ?>index.php/admin/updateRemark" method="post">
+                <form action="<?php echo base_url(); ?>admin/updateRemark" method="post">
                     <div class="row uniform">
                         <div class="4u">
                             <br />

@@ -33,10 +33,10 @@ class Complaint extends CI_Controller {
     function checkSession() {
         if (isset($_SESSION['user_type'])) {
             if ($_SESSION['user_type'] == 'student') {
-                header('location: ' . base_url() . 'index.php/student');
+                header('location: ' . base_url() . 'student');
                 die();
             } else if ($_SESSION['user_type'] == 'caretaker' || $_SESSION['user_type'] == 'warden') {
-                header('location: ' . base_url() . 'index.php/admin');
+                header('location: ' . base_url() . 'admin');
                 die();
             }
         }
@@ -112,7 +112,7 @@ class Complaint extends CI_Controller {
         $this->Outer_model->contact($data);
         $_SESSION['stmt'] = TRUE;
         $_SESSION['nm'] = $data['name'];
-        redirect(base_url() . 'index.php/complaint/contact');
+        redirect(base_url() . 'complaint/contact');
     }
 
     public function check_user() {
@@ -179,7 +179,7 @@ class Complaint extends CI_Controller {
             $error = 'Please enter a valid email...';
         }
         $_SESSION['error'] = $error;
-        redirect(base_url() . 'index.php/complaint/forgotPassword');
+        redirect(base_url() . 'complaint/forgotPassword');
     }
 
     function send_reset_password_email($email, $name) {
@@ -190,9 +190,9 @@ class Complaint extends CI_Controller {
         $message = '<html>
 		<body>
 		<p>Dear ' . $name . ', <br><br>
-		To reset your onlinehostelj.in password, <a href="' . base_url() . 'index.php/complaint/resetPassword/' . $email . '/' . $email_code . '">click here</a>. <br><br>
+		To reset your onlinehostelj.in password, <a href="' . base_url() . 'complaint/resetPassword/' . $email . '/' . $email_code . '">click here</a>. <br><br>
 		If you are not able to view the link above, copy and paste into your address bar: 
-		' . base_url() . 'index.php/complaint/resetPassword/' . $email . '/' . $email_code . '/ <br><br>
+		' . base_url() . 'complaint/resetPassword/' . $email . '/' . $email_code . '/ <br><br>
 		If this was not you, kindly ignore this email.<br><br>
 		Regards,<br>
 		Developer
@@ -259,21 +259,21 @@ class Complaint extends CI_Controller {
                 $salt = "thispasswordcannotbehacked";
                 $pass = hash('sha256', $salt . $pass);
                 $this->Outer_model->updatePass($email, $pass);
-		redirect(base_url() . 'index.php/complaint/sign_in');
+		redirect(base_url() . 'complaint/sign_in');
             } else
-                redirect(base_url() . 'index.php/complaint/resetPassword/' . $email . '/' . $email_code);
+                redirect(base_url() . 'complaint/resetPassword/' . $email . '/' . $email_code);
         } else {
             $_SESSION['emailerr'] = '';
-            redirect(base_url() . 'index.php/complaint/resetPassword/' . $email . '/' . $email_code);
+            redirect(base_url() . 'complaint/resetPassword/' . $email . '/' . $email_code);
         }
     }
 
     public function logout() {
         if (!isset($_SESSION['id']))
-            header('location: ' . base_url() . 'index.php/complaint');
+            header('location: ' . base_url() . 'complaint');
         session_unset();
         session_destroy();
-        header('location: ' . base_url() . 'index.php/complaint');
+        header('location: ' . base_url() . 'complaint');
     }
 
 }

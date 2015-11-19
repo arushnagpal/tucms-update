@@ -3,7 +3,7 @@
         <h3 style="margin-bottom:0px;">Search For students</h3>
     </header>
     <div class="box">
-        <form method="post" action="<?php echo base_url(); ?>index.php/admin/search">
+        <form method="post" action="<?php echo base_url(); ?>admin/search">
             <div class="row uniform half">
                 <div class="6u">
                     <input type="text" name="name" id="name" placeholder="Search by Name"/>

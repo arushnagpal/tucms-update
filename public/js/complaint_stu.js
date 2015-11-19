@@ -5,7 +5,7 @@
  */
 function show(id)
 {
-    $.post('http://localhost/ci/index.php/student/popup/', {send: id}, function(result) {
+    $.post('http://localhost/ci/student/popup/', {send: id}, function(result) {
         var data = result.split(",");
         document.getElementById("ajaxdata").innerHTML = "<td>" + data[0] + "</td>";
         for (i = 1; i < 7; i++)

@@ -16,7 +16,7 @@
 
     </header>
     <div class="box">
-        <form method="post" action="<?php echo base_url(); ?>index.php/admin/updateProfile">
+        <form method="post" action="<?php echo base_url(); ?>admin/updateProfile">
             <div class="row uniform half collapse-at-2">
                 <div class="12u">
                     <input type="text" name="name" id="name" value="<?php echo $_SESSION['name']; ?>" readonly/>

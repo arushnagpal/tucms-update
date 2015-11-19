@@ -3,7 +3,7 @@
         <div id="type">
             <center>
                 <h2>Reset Password</h2>
-                <form action="<?php echo base_url(); ?>index.php/complaint/updatePassword" method="post">
+                <form action="<?php echo base_url(); ?>complaint/updatePassword" method="post">
                     <input type="hidden" name="email_code" value="<?php echo $email_code; ?>" readonly>
                     <input type="email" name="email" value="<?php echo $email; ?>" readonly><br>
                     <span>Password : atleast 1 number, 1 lowercase alphabet and minimum length is 6</span>

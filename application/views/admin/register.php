@@ -18,7 +18,7 @@
         ?>
     </header>
     <div class="box">
-        <form method="post" action="<?php echo base_url(); ?>index.php/admin/registration">
+        <form method="post" action="<?php echo base_url(); ?>admin/registration">
             <div class="row uniform half">
                 <div class="12u">
                     <input type="text" name="name" id="category" placeholder="Name" required/>

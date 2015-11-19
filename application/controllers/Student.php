@@ -15,10 +15,10 @@ class Student extends CI_Controller {
         session_start();
         session_regenerate_id(true);
         if (!isset($_SESSION['id'])) {
-            header('location: ' . base_url() . 'index.php/complaint');
+            header('location: ' . base_url() . 'complaint');
             die();
         } else if ($_SESSION['user_type'] == 'caretaker' || $_SESSION['user_type'] == 'warden') {
-            header('location: ' . base_url() . 'index.php/admin');
+            header('location: ' . base_url() . 'admin');
             die();
         }
         $this->load->model('Student_model');
@@ -71,7 +71,7 @@ class Student extends CI_Controller {
 
         $data['type'] = $this->input->post('type');
         if ($data['type'] == '')
-            redirect(base_url() . 'index.php/student');
+            redirect(base_url() . 'student');
         $data['message'] = $this->input->post('message');
         $data['level'] = $this->input->post('level');
         $data['go'] = $this->input->post('go');
@@ -220,7 +220,7 @@ class Student extends CI_Controller {
                     $this->Student_model->updatePro($pass);
                 } else
                     $_SESSION['passerr'] = "Password is not valid. ";
-                redirect(base_url() . 'index.php/student/profile');
+                redirect(base_url() . 'student/profile');
             }
         }
     }

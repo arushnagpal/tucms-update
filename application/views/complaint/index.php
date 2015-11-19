@@ -15,7 +15,7 @@
         All those who are not registered for the website are requested to contact caretaker.<br>
         Tuckshop login not working? Contact Naman Garg: nmngarg174@gmail.com, 8437928163 
         <ul class="actions">
-            <li><a href="<?php echo base_url(); ?>index.php/complaint/sign_in" class="button special">Sign In (For Complaints)</a>&nbsp &nbsp 
+            <li><a href="<?php echo base_url(); ?>complaint/sign_in" class="button special">Sign In (For Complaints)</a>&nbsp &nbsp 
                 <a href="http://tuckshop.onlinehostelj.in" class="button special" target="_blank">Hostel J Tuck Shop</a>&nbsp &nbsp
                 <br>
              <!--   <a href="http://book.onlinehostelj.in" class="button special">Online Hostel Allotment</a>&nbsp &nbsp 

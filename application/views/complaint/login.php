@@ -42,7 +42,7 @@
                 <div class="12u" style="padding-top:0px">
                     <ul class="actions align-center">
                         <li><a><input type="button" class="special" id="signin" onClick="val()" value="Sign In" /></a></li>
-                        <li><a class="button special" href="<?php echo base_url(); ?>index.php/complaint/forgotPassword">Forgot Password?</a></li>
+                        <li><a class="button special" href="<?php echo base_url(); ?>complaint/forgotPassword">Forgot Password?</a></li>
                     </ul>
                 </div>
             </div>

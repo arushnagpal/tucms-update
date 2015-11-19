@@ -25,11 +25,11 @@
     </header>
 
     <div class="box">
-        <form action="<?php echo base_url(); ?>index.php/admin/deleteComplaints" method="post" id="all">
+        <form action="<?php echo base_url(); ?>admin/deleteComplaints" method="post" id="all">
             <input type="hidden" value="all" name="clean">
             <input type="button" class="button special" value="Click here" onClick="allClear()"> to delete all complaints (Empty the table) <br>
         </form>
-        <form action="<?php echo base_url(); ?>index.php/admin/deleteComplaints" method="post" id="comp">
+        <form action="<?php echo base_url(); ?>admin/deleteComplaints" method="post" id="comp">
             <input type="hidden" value="complete" name="clean">
             <input type="button" class="button special" value="Click here" onClick="compClear()"> to delete all completed complaints <br>
         </form>

@@ -8,7 +8,7 @@
         ?>
     </header>
     <div class="box">
-        <form action="<?php echo base_url(); ?>index.php/admin/pollinsert" method="post">
+        <form action="<?php echo base_url(); ?>admin/pollinsert" method="post">
             <input type="text" name="ques" placeholder="Enter the question here..."><br>
             <font color="red"><?php if (isset($_SESSION['queserr'])) echo $_SESSION['queserr']; ?></font>
             <input type="text" name="op1" placeholder="Option 1: " required><br>

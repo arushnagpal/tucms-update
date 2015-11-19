@@ -123,7 +123,7 @@ class Admin extends CI_Controller {
         $_SESSION['fstat'] = $this->input->get('fstat');
         $_SESSION['f_sdate'] = $this->input->get('f_sdate');
         $_SESSION['f_edate'] = $this->input->get('f_edate');
-        redirect(base_url() . 'index.php/admin');
+        redirect(base_url() . 'admin');
     }
 
     public function resetFilters() {
@@ -137,7 +137,7 @@ class Admin extends CI_Controller {
         unset($_SESSION['f_sdate'], $temp);
         $temp = $_SESSION['f_edate'];
         unset($_SESSION['f_edate'], $temp);
-        redirect(base_url() . 'index.php/admin');
+        redirect(base_url() . 'admin');
     }
 
     public function popup() {
@@ -201,7 +201,7 @@ class Admin extends CI_Controller {
             $newdata = $this->Admin_model->pollinsertquery($data);
             $_SESSION['flag'] = 1;
         }
-        redirect(base_url() . 'index.php/admin/newpoll');
+        redirect(base_url() . 'admin/newpoll');
     }
 
     public function pollgraph($page = 'poll_result1') {
@@ -223,7 +223,7 @@ class Admin extends CI_Controller {
         $data = $this->input->post();
         $this->Admin_model->addCat($data);
         $_SESSION['stmt'] = TRUE;
-        redirect(base_url() . 'index.php/admin/add_category');
+        redirect(base_url() . 'admin/add_category');
     }
 
     public function del_category($page = 'delete') {
@@ -246,7 +246,7 @@ class Admin extends CI_Controller {
         $cat = $data['category'];
         $this->Admin_model->deleteCat($cat);
         $_SESSION['stmt'] = TRUE;
-        redirect(base_url() . 'index.php/admin/del_category');
+        redirect(base_url() . 'admin/del_category');
     }
 
     public function clean_database($page = 'clean') {
@@ -264,7 +264,7 @@ class Admin extends CI_Controller {
         $type = $this->input->post('clean');
 //print_r($type);        
         $this->Admin_model->deleteComplaints($type);
-        redirect(base_url() . 'index.php/admin/clean_database');
+        redirect(base_url() . 'admin/clean_database');
     }
 
     public function search($page = 'search') {
@@ -334,7 +334,7 @@ class Admin extends CI_Controller {
                     $pass = hash('sha256', $salt . $pass);
                     $this->Admin_model->updatePro($pass);
                 }
-                redirect(base_url() . 'index.php/admin/profile');
+                redirect(base_url() . 'admin/profile');
             }
         }
     }
@@ -397,7 +397,7 @@ This is a system generated email. Donot reply to this email.<br>
             $headers.="From:Hostel-J<developer@onlinehostelj.in>";
             mail($email, $subject, $message, $headers); 
         }
-        redirect(base_url() . 'index.php/admin');
+        redirect(base_url() . 'admin');
     }
 
     function generate_password() {
@@ -532,17 +532,17 @@ This is a system generated email. Donot reply to this email.<br>
         $roomerr=$this->Admin_model->checkRoom($room);
         if($emailerr) {
             $_SESSION['emailerr']=TRUE;
-            redirect(base_url() . 'index.php/admin/register');
+            redirect(base_url() . 'admin/register');
         }
         else if($roomerr) {
             $_SESSION['roomerr']=TRUE;
-            redirect(base_url() . 'index.php/admin/register');
+            redirect(base_url() . 'admin/register');
         }
         else{
             $this->Admin_model->insertRegistration($name,$roll,$email,$contact,$room);
             $this->registermail($email);
             $_SESSION['stmt']=TRUE;
-            redirect(base_url() . 'index.php/admin/register');
+            redirect(base_url() . 'admin/register');
         }    
     }
 

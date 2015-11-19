@@ -1,7 +1,7 @@
 // JavaScript Document
 function show(id)
 {
-    $.post('http://localhost/ci/index.php/admin/popup/', {send: id}, function(result) {
+    $.post('http://localhost/ci/admin/popup/', {send: id}, function(result) {
         var data = result.split(",");
         document.getElementById("ajaxdata").innerHTML = "<td>" + data[0] + "</td>";
         for (i = 1; i < 7; i++)
@@ -38,8 +38,8 @@ function update() {
     var stat = document.getElementById("status").selectedIndex;
     var stats = document.getElementById("status")[stat].value;
     //window.alert(re+expdate+stats);
-    $.post('http://localhost/ci/index.php/admin/updateRemark/', {remark: re, status: stats, cdate: expdate}, function(result) {
-        window.location.assign("http://localhost/ci/index.php/admin/");
+    $.post('http://localhost/ci/admin/updateRemark/', {remark: re, status: stats, cdate: expdate}, function(result) {
+        window.location.assign("http://localhost/ci/admin/");
 
     });
 }

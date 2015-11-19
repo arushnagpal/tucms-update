@@ -32,7 +32,7 @@
     </head>
     <body>
         <header id="header" class="skel-layers-fixed">
-            <h1 style="font-size:30px"><a href="<?php echo base_url(); ?>index.php/complaint">HOSTEL-J</a><a href="http://www.thapar.edu" target="_blank" style="font-weight:100"> Thapar University</a></h1>
+            <h1 style="font-size:30px"><a href="<?php echo base_url(); ?>complaint">HOSTEL-J</a><a href="http://www.thapar.edu" target="_blank" style="font-weight:100"> Thapar University</a></h1>
             <nav id="nav">
                 <ul>
                     <li><?php
@@ -41,30 +41,30 @@
                         ?>
                         <a href="" class="icon fa-angle-down"><?php echo ucfirst($_SESSION['name']); ?></a>
                         <ul><?php if ($_SESSION['user_type'] == 'student') { ?>
-                                <li><a href="<?php echo base_url(); ?>index.php/student">New Complaints</a></li>
-                                <li><a href="<?php echo base_url(); ?>index.php/student/status">View Status</a></li>
-                                <li><a href="<?php echo base_url(); ?>index.php/student/profile">Account Settings</a></li>
-                                <li><a href="<?php echo base_url(); ?>index.php/complaint/logout">Logout</a></li>
+                                <li><a href="<?php echo base_url(); ?>student">New Complaints</a></li>
+                                <li><a href="<?php echo base_url(); ?>student/status">View Status</a></li>
+                                <li><a href="<?php echo base_url(); ?>student/profile">Account Settings</a></li>
+                                <li><a href="<?php echo base_url(); ?>complaint/logout">Logout</a></li>
                                 <?php
                             } else if ($_SESSION['user_type'] == 'caretaker') {
                                 ?>
-                                <li><a href="<?php echo base_url(); ?>index.php/admin">Complaints</a></li>     
-                                <li><a href="<?php echo base_url(); ?>index.php/admin/search">Search Student</a></li> 
-                                <li><a href="<?php echo base_url(); ?>index.php/admin/register">New Registration</a></li>                          
-                                <li><a href="<?php echo base_url(); ?>index.php/admin/newpoll">Create New Poll</a></li>
-                                <li><a href="<?php echo base_url(); ?>index.php/admin/pollresult">Poll Results</a></li>                                
-                                <li><a href="<?php echo base_url(); ?>index.php/admin/profile">Account Settings</a></li>
-                                <li><a href="<?php echo base_url(); ?>index.php/complaint/logout">Logout</a></li>
+                                <li><a href="<?php echo base_url(); ?>admin">Complaints</a></li>     
+                                <li><a href="<?php echo base_url(); ?>admin/search">Search Student</a></li> 
+                                <li><a href="<?php echo base_url(); ?>admin/register">New Registration</a></li>                          
+                                <li><a href="<?php echo base_url(); ?>admin/newpoll">Create New Poll</a></li>
+                                <li><a href="<?php echo base_url(); ?>admin/pollresult">Poll Results</a></li>                                
+                                <li><a href="<?php echo base_url(); ?>admin/profile">Account Settings</a></li>
+                                <li><a href="<?php echo base_url(); ?>complaint/logout">Logout</a></li>
                             <?php } else if ($_SESSION['user_type'] == 'warden') { ?>
-                                <li><a href="<?php echo base_url(); ?>index.php/admin">Complaints</a></li>
-                                <li><a href="<?php echo base_url(); ?>index.php/admin/search">Search Student</a></li>
-                                <li><a href="<?php echo base_url(); ?>index.php/admin/add_category">Add Complaint Type</a></li>
-                                <li><a href="<?php echo base_url(); ?>index.php/admin/del_category">Delete Complaint Type</a></li>
-                                <li><a href="<?php echo base_url(); ?>index.php/admin/clean_database">Clear Database</a></li>
-                                <li><a href="<?php echo base_url(); ?>index.php/admin/newpoll">Create New Poll</a></li>
-                                <li><a href="<?php echo base_url(); ?>index.php/admin/pollresult">Poll Results</a></li>
-                                <li><a href="<?php echo base_url(); ?>index.php/admin/profile">Account Settings</a></li>
-                                <li><a href="<?php echo base_url(); ?>index.php/complaint/logout">Logout</a></li>
+                                <li><a href="<?php echo base_url(); ?>admin">Complaints</a></li>
+                                <li><a href="<?php echo base_url(); ?>admin/search">Search Student</a></li>
+                                <li><a href="<?php echo base_url(); ?>admin/add_category">Add Complaint Type</a></li>
+                                <li><a href="<?php echo base_url(); ?>admin/del_category">Delete Complaint Type</a></li>
+                                <li><a href="<?php echo base_url(); ?>admin/clean_database">Clear Database</a></li>
+                                <li><a href="<?php echo base_url(); ?>admin/newpoll">Create New Poll</a></li>
+                                <li><a href="<?php echo base_url(); ?>admin/pollresult">Poll Results</a></li>
+                                <li><a href="<?php echo base_url(); ?>admin/profile">Account Settings</a></li>
+                                <li><a href="<?php echo base_url(); ?>complaint/logout">Logout</a></li>
                             <?php } ?>
                         </ul>
                     </li>
