@@ -61,6 +61,7 @@
                                 <li><a href="<?php echo base_url(); ?>admin/add_category">Add Complaint Type</a></li>
                                 <li><a href="<?php echo base_url(); ?>admin/del_category">Delete Complaint Type</a></li>
                                 <li><a href="<?php echo base_url(); ?>admin/clean_database">Clear Database</a></li>
+                                <li><a href="<?php echo base_url(); ?>admin/add_notification">Add or Delete Notifications</a></li>
                                 <li><a href="<?php echo base_url(); ?>admin/newpoll">Create New Poll</a></li>
                                 <li><a href="<?php echo base_url(); ?>admin/pollresult">Poll Results</a></li>
                                 <li><a href="<?php echo base_url(); ?>admin/profile">Account Settings</a></li>
