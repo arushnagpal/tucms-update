@@ -10,6 +10,10 @@ class Admin_model extends CI_Model {
         return $this->db->insert("category", $data);
     }
 
+    public function addNotf($data) {
+        $comm = "INSERT INTO notifications(notification_detail) VALUES ('$data')";
+        $this->db->query($comm);
+    }
     public function deleteComplaints($type) {
         if ($type == 'all'){
             $this->db->query('delete from remarks where 1');

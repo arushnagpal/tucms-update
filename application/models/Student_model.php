@@ -21,6 +21,16 @@ class Student_model extends CI_Model {
         return $arr;
     }
 
+    public function allnotifs() {
+        $arr = array();
+        $query = 'SELECT * FROM notifications';
+        $result = $this->db->query($query);
+        foreach ($result->result() as $row) {
+            array_push($arr, $row->notification_detail);
+        }
+        return $arr;
+    }
+
     function getNumCat($type) {
         $result = $this->db->query("select id from category where category='" . $type . "'");
         return $result->num_rows();
