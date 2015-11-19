@@ -21,8 +21,20 @@
              <!--   <a href="http://book.onlinehostelj.in" class="button special">Online Hostel Allotment</a>&nbsp &nbsp 
                 <a href="http://onlinehostelj.in/shared/" class="button special">Shared Room Allotment</a><br>     -->           
             </li>
-        </ul>            
-    </section><br><br><br>
+        </ul>
+            <p><font color="red"><h3>Announcements</h3></font></p>
+             <font color="white"><?php $i=1; foreach($notifications as $row1)
+             {
+                echo $i++.". ";
+                echo $row1;
+                echo "&nbsp;&nbsp;&nbsp;&nbsp;<br>";
+                }    ?> </font>
+              
+            
+    </section><br>
+
+
+    <br><br>
     <!-- Main -->
     <section id="main" class="container">
         <section class="box special">
